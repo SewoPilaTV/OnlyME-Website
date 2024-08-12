@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog o mnie">
+    <meta name="keywords" content="programowanie, HTML, CSS, JavaScript">
+    <meta name="author" content="SewoME">
+    <title>OnlyME</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8064200384394394" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>OnlyME</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="current">Start</a></li>
+                    <li><a href="about.html">O mnie</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="media.html">Social Media</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formularz wyszukiwania poniżej paska nawigacyjnego -->
+    <form id="search-form" class="search-form" method="GET">
+        <input type="text" id="search-input" name="q" placeholder="Szukaj...">
+        <button type="submit">Szukaj</button>
+    </form>      
+
+    <main class="container">
+        <!-- Tryb Siatki i Listy -->
+        <section class="view-toggle">
+            <button id="grid-view" class="active">Widok Siatki</button>
+            <button id="list-view">Widok Listy</button>
+        </section>
+
+        <!-- Posty -->
+        <section class="posts grid-view" id="posts-section">
+            <div class="post">
+                <img src="images/featured-image.jpg" alt="Opis zdjęcia do posta" class="featured-image">
+                <div class="text-content">
+                    <h2>Witajcie na stronie</h2>
+                    <p>To jest pierwszy post na tej stronie. Tutaj znajdziesz szczegóły dotyczące tego posta.</p>
+                    <a href="post1.html" class="read-more">Czytaj więcej</a>
+                </div>
+            </div>
+            <!-- Dodaj więcej postów według potrzeby -->
+        </section>
+        
+        <!-- Najpopularniejsze Posty -->
+        <section class="popular-posts">
+            <h2>Najpopularniejsze Posty</h2>
+            <ul>
+                <li><a href="">Tytuł Najpopularniejszego Posta 2</a></li>
+                <li><a href="">Tytuł Najpopularniejszego Posta 3</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="/privacy-policy.html" class="footer-link">Polityka prywatności</a>
+                <a href="/terms-of-service.html" class="footer-link">Warunki korzystania</a>
+            </div>
+            <p>&copy; 2024 OnlyME. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>  
+
+    <!-- Powiadomienie o cookies -->
+    <div id="cookie-consent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>Ta strona używa plików cookies, aby poprawić jakość usług. Kontynuując przeglądanie, akceptujesz ich użycie.</p>
+            <button id="accept-cookies" class="cookie-button">Zaakceptuj</button>
+            <button id="decline-cookies" class="cookie-button">Odrzuć</button>
+        </div>
+    </div>
+
+    <script src="scripts/cookie-consent.js" defer></script>
+    <script src="scripts/views.js" defer></script>
+
+    <script src="scripts/view-toggle.js" defer></script>
+    <script src="scripts/search.js" defer></script> <!-- Dodaj skrypt wyszukiwania -->
+</body>
+</html>
